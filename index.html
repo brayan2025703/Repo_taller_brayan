@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <div class="tarjeta">
+        
+        <div class="info">
+            <h1>STIVEN ESTEPA</h1>
+
+            <div class="botones">
+                <button onclick="mostrar('descripcion')">Descripción</button>
+                <button onclick="mostrar('estudios')">Estudios</button>
+                <button onclick="mostrar('conocimientos')">Conocimientos</button>
+                <button onclick="mostrar('hobbies')">Hobbies</button>
+                <button onclick="mostrar('suenos')">Sueños</button>
+            </div>
+
+            <div class="contenido" id="contenido">
+                Soy una persona responsable, comprometida y con muchas ganas de salir adelante.
+            </div>
+
+            <div class="contacto">
+                📧 <a href="mailto:brayanstivene.a.04@gmail.com">Correo</a> |
+                📱 <a href="https://wa.me/573175821135" target="_blank">WhatsApp</a> |
+                💻 <a href="https://github.com/brayan2025703" target="_blank">GitHub</a>
+            </div>
+
+            <div class="skills">
+                🧠 HTML &nbsp; 🧠 CSS &nbsp; 🧠 GitHub
+            </div>
+        </div>
+
+        <div class="foto">
+            <img src="assets/img.JPEG" alt="Foto">
+        </div>
+
+    </div>
+</div>
+
+<script>
+const datos = {
+
+descripcion: `
+<p>Soy una persona responsable, comprometida y con muchas ganas de salir adelante.</p>
+<p>Me gusta aprender cosas nuevas cada día y mejorar constantemente mis habilidades.</p>
+<p>Me interesa el mundo de la tecnología y el desarrollo web, y estoy enfocado en crecer profesionalmente en esta área.</p>
+`,
+
+estudios: `
+<ul>
+    <li>Bachiller académico</li>
+    <li>Técnico en Cultivos Agrícolas</li>
+    <li>Formación complementaria en desarrollo web (HTML y CSS)</li>
+    <li>formacion en tecnologo de analisis y desarollo de software</li>
+</ul>
+`,
+
+conocimientos: `
+<ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>Visual Studio Code</li>
+    <li>Manejo básico de herramientas digitales</li>
+</ul>
+`,
+
+hobbies: `
+<ul>
+    <li>Escuchar música</li>
+    <li>Investigar sobre tecnología</li>
+    <li>Aprender programación</li>
+    <li>Usar el computador</li>
+    <li>Explorar nuevas herramientas digitales</li>
+</ul>
+`,
+
+suenos: `
+<p>Mi sueño es convertirme en un gran desarrollador profesional.</p>
+<p>Tener estabilidad laboral.</p>
+<p>Seguir aprendiendo nuevas tecnologías.</p>
+<p>Crecer tanto personal como profesionalmente.</p>
+`
+};
+
+function mostrar(seccion){
+    const cont = document.getElementById("contenido");
+    cont.style.opacity="0";
+
+    setTimeout(()=>{
+        cont.innerHTML = datos[seccion];
+        cont.style.opacity="1";
+    },200);
+}
+</script>
+
+</body>
+</html>
